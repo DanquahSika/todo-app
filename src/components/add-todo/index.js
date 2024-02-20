@@ -117,7 +117,7 @@ const [todo, setTodo] =useState("");
             
             className={styles.addTodoInput} 
             placeholder="Start typing..."/>
-            <button onClick={function () {
+            <button className= "btn btn-primary" onClick={function () {
                 // Get existing list of todos from local storage (deserialize into a string for local storage)
     
                 // Add new todo to existing list of todos

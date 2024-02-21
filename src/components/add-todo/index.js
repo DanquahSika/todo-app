@@ -115,13 +115,16 @@ const [todo, setTodo] =useState("");
                 setTodo(event.target.value);
             }} 
             
-            className={styles.addTodoInput} 
+            className={styles.addTodoInput}
+            value={todo} 
             placeholder="Start typing..."/>
             <button className= "btn btn-primary" onClick={function () {
                 // Get existing list of todos from local storage (deserialize into a string for local storage)
     
                 // Add new todo to existing list of todos
                 setTodos([...todos, todo]);
+                // to Wipe the input
+                setTodo("");
                 // Set all todos in local storage (serialize into a string before storing in local storage)
                 localStorage.setItem('TODO_KEY', JSON.stringify(todos));
                 
